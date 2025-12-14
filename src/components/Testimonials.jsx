@@ -39,7 +39,7 @@ const Testimonials = () => {
         }
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -107,6 +107,20 @@ const Testimonials = () => {
           flex-direction: column;
           height: 100%; /* Ensure equal height */
           min-height: 280px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+          .client-card {
+            padding: 20px;
+            min-height: auto;
+          }
+          .slider-container {
+            margin: 0 -8px;
+          }
+          .slider-item {
+            padding: 0 8px;
+          }
         }
         
         .stars {

@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-brand">
-            <div className="logo">
+            <a href="/" className="logo">
               <img src="/images/logo.png" alt="Aquazenix Logo" className="logo-icon" style={{ height: '40px', width: 'auto' }} />
               <span className="logo-text">Aquazenix</span>
-            </div>
+            </a>
             <p>Professional water tank cleaning services committed to delivering safe, hygienic, and crystal clear water to your home and business.</p>
             <div className="social-links">
               <a href="#"><Facebook size={20} /></a>
@@ -23,27 +23,27 @@ const Footer = () => {
             <div className="footer-column">
               <h4>Services</h4>
               <ul>
-                <li><a href="#">Residential</a></li>
-                <li><a href="#">Commercial</a></li>
-                <li><a href="#">Testing</a></li>
+                <li><a href="#services">Residential</a></li>
+                <li><a href="#services">Commercial</a></li>
+                <li><a href="#process">Testing</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4>Company</h4>
               <ul>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">About Us</a></li>
+                <li><a href="#contact">Careers</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
 
             <div className="footer-column">
               <h4>Support</h4>
               <ul>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Privacy Policy</a></li>
+                <li><a href="#contact">Terms</a></li>
               </ul>
             </div>
           </div>

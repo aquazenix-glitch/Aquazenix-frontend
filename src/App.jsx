@@ -1,4 +1,4 @@
-import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -11,24 +11,34 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import ServicesPage from './pages/ServicesPage';
 import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Stats />
-      <Services />
-      <Process />
-      <Gallery />
-      <Comparison />
-      <Testimonials />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Navbar />
+              <Hero />
+              <Stats />
+              <Services />
+              <Process />
+              <Gallery />
+              <Comparison />
+              <Testimonials />
+              <FAQ />
+              <Contact />
+              <Footer />
+            </>
+          } />
+          <Route path="/services" element={<ServicesPage />} />
+        </Routes>
+        <WhatsAppButton />
+      </div>
+    </Router>
   );
 }
 

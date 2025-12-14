@@ -8,22 +8,22 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container navbar-container">
-        <div className="logo">
+        <a href="/" className="logo">
           <img src="/images/logo.png" alt="Aquazenix Logo" className="logo-icon" style={{ height: '40px', width: 'auto' }} />
           <span className="logo-text">Aquazenix</span>
-        </div>
+        </a>
 
         {/* Desktop Menu */}
         <div className="nav-links desktop-only">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#process">Process</a>
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact</a>
+          <a href="/#home">Home</a>
+          <a href="/#services">Services</a>
+          <a href="/#process">Process</a>
+          <a href="/#about">About Us</a>
+          <a href="/#contact">Contact</a>
         </div>
 
         <div className="nav-actions desktop-only">
-          <button className="btn btn-primary">Get Quote</button>
+          <a href="/#contact" className="btn btn-primary">Get Quote</a>
         </div>
 
         {/* Mobile Toggle */}
@@ -35,12 +35,12 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="mobile-menu">
-          <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#process" onClick={() => setIsOpen(false)}>Process</a>
-          <a href="#about" onClick={() => setIsOpen(false)}>About</a>
-          <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
-          <button className="btn btn-primary full-width">Get a Quote</button>
+          <a href="/#home" onClick={() => setIsOpen(false)}>Home</a>
+          <a href="/#services" onClick={() => setIsOpen(false)}>Services</a>
+          <a href="/#process" onClick={() => setIsOpen(false)}>Process</a>
+          <a href="/#about" onClick={() => setIsOpen(false)}>About</a>
+          <a href="/#contact" onClick={() => setIsOpen(false)}>Contact</a>
+          <a href="/#contact" className="btn btn-primary full-width" onClick={() => setIsOpen(false)}>Get a Quote</a>
         </div>
       )}
 

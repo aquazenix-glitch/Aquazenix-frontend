@@ -2,71 +2,71 @@ import React from 'react';
 import { Home, Building2, Warehouse, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const Services = () => {
-    const services = [
-        {
-            icon: <Home size={24} />,
-            title: 'Residential Tanks',
-            description: 'Complete mechanized cleaning and UV disinfection for home overhead tanks and lofts.',
-            features: ['6-Step Process', 'Sludge Removal'],
-            bg: 'white',
-            textColor: 'text-dark'
-        },
-        {
-            icon: <Building2 size={24} />,
-            title: 'Commercial Solutions',
-            description: 'Large-scale cleaning for office buildings, apartments, and industrial complexes.',
-            features: ['AMC Packages', 'Certified Reports'],
-            bg: 'primary',
-            textColor: 'white'
-        },
-        {
-            icon: <Warehouse size={24} />,
-            title: 'Sump Cleaning',
-            description: 'Deep cleaning, dewatering, and sludge removal for underground sumps of all sizes.',
-            features: ['Vacuum Technology', 'Anti-bacterial Spray'],
-            bg: 'white',
-            textColor: 'text-dark'
-        }
-    ];
+  const services = [
+    {
+      icon: <Home size={24} />,
+      title: 'Residential Tanks',
+      description: 'Complete mechanized cleaning and UV disinfection for home overhead tanks and lofts.',
+      features: ['6-Step Process', 'Sludge Removal'],
+      bg: 'white',
+      textColor: 'text-dark'
+    },
+    {
+      icon: <Building2 size={24} />,
+      title: 'Commercial Solutions',
+      description: 'Large-scale cleaning for office buildings, apartments, and industrial complexes.',
+      features: ['AMC Packages', 'Certified Reports'],
+      bg: 'primary',
+      textColor: 'white'
+    },
+    {
+      icon: <Warehouse size={24} />,
+      title: 'Sump Cleaning',
+      description: 'Deep cleaning, dewatering, and sludge removal for underground sumps of all sizes.',
+      features: ['Vacuum Technology', 'Anti-bacterial Spray'],
+      bg: 'white',
+      textColor: 'text-dark'
+    }
+  ];
 
-    return (
-        <section id="services" className="section services-section">
-            <div className="container">
-                <div className="section-header">
-                    <span className="badge">Our Expertise</span>
-                    <h2>Comprehensive Cleaning Solutions</h2>
-                    <p>We offer specialized cleaning for every type of water storage system.</p>
-                    <a href="#" className="view-all">View All Services <ArrowRight size={16} /></a>
-                </div>
+  return (
+    <section id="services" className="section services-section">
+      <div className="container">
+        <div className="section-header">
+          <span className="badge">Our Expertise</span>
+          <h2>Comprehensive Cleaning Solutions</h2>
+          <p>We offer specialized cleaning for every type of water storage system.</p>
+          <a href="/services" className="view-all">View All Services <ArrowRight size={16} /></a>
+        </div>
 
-                <div className="services-grid">
-                    {services.map((service, index) => (
-                        <div
-                            key={index}
-                            className={`service-card ${service.bg === 'primary' ? 'bg-primary' : 'bg-white'}`}
-                        >
-                            <div className={`service-icon-box ${service.bg === 'primary' ? 'icon-light' : 'icon-primary'}`}>
-                                {service.icon}
-                            </div>
-                            <h3>{service.title}</h3>
-                            <p>{service.description}</p>
+        <div className="services-grid">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`service-card ${service.bg === 'primary' ? 'bg-primary' : 'bg-white'}`}
+            >
+              <div className={`service-icon-box ${service.bg === 'primary' ? 'icon-light' : 'icon-primary'}`}>
+                {service.icon}
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.description}</p>
 
-                            <ul className="service-features">
-                                {service.features.map((feature, i) => (
-                                    <li key={i}>
-                                        <CheckCircle2 size={16} className="feature-icon" />
-                                        {feature}
-                                    </li>
-                                ))}
-                            </ul>
+              <ul className="service-features">
+                {service.features.map((feature, i) => (
+                  <li key={i}>
+                    <CheckCircle2 size={16} className="feature-icon" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
 
-                            <button className="btn-link">Learn more</button>
-                        </div>
-                    ))}
-                </div>
+              <button className="btn-link">Learn more</button>
             </div>
+          ))}
+        </div>
+      </div>
 
-            <style>{`
+      <style>{`
         .services-section {
           background-color: #f8faff;
         }
@@ -168,8 +168,8 @@ const Services = () => {
           }
         }
       `}</style>
-        </section>
-    );
+    </section>
+  );
 };
 
 export default Services;

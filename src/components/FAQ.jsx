@@ -28,7 +28,7 @@ const FAQ = () => {
     ];
 
     return (
-        <section className="section faq-section">
+        <section id="faq" className="section faq-section">
             <div className="container">
                 <div className="text-center mb-5">
                     <h2>Frequently Asked Questions</h2>
