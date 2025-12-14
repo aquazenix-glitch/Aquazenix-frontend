@@ -123,6 +123,12 @@ const Contact = () => {
             <h3>Send us a message</h3>
             <p>Fill out the form below for a free quote. We typically respond within 2 hours.</p>
 
+            {message && (
+              <div className={`form-message ${message.includes('error') || message.includes('Network') ? 'error' : 'success'}`}>
+                {message}
+              </div>
+            )}
+
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -314,6 +320,23 @@ const Contact = () => {
             grid-template-columns: 1fr;
             gap: 0;
           }
+        }
+        .form-message {
+          padding: 12px;
+          border-radius: 6px;
+          margin-bottom: 20px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+        .form-message.success {
+          background-color: #d1fae5;
+          color: #065f46;
+          border: 1px solid #a7f3d0;
+        }
+        .form-message.error {
+          background-color: #fee2e2;
+          color: #b91c1c;
+          border: 1px solid #fca5a5;
         }
       `}</style>
     </section>
