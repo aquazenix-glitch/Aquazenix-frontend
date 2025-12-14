@@ -91,8 +91,8 @@ const Testimonials = () => {
         /* Slider Tweaks */
         .slider-container {
           margin: 0 -12px;
-          padding: 20px 0;
-          overflow: hidden;
+          padding: 20px 0 60px 0; /* Sufficient padding for dots */
+          overflow: hidden; /* Keeps dots within if they are in the padding area */
         }
         .slider-item {
           padding: 0 12px;
@@ -184,7 +184,17 @@ const Testimonials = () => {
             color: var(--primary-blue);
         }
         .slick-dots {
-            bottom: -35px;
+            bottom: -40px;
+        }
+
+        /* Hide dots on mobile to prevent overlap and save space */
+        @media (max-width: 768px) {
+          .slick-dots {
+            display: none !important;
+          }
+          .slider-container {
+            padding-bottom: 20px; /* Reduce padding on mobile since dots are gone */
+          }
         }
       `}</style>
     </section>
