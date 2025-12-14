@@ -26,7 +26,7 @@ const Contact = () => {
     console.log('Submitting quote...', formData);
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/submit-quote/', {
+      const response = await fetch('https://aquazenix-backend.vercel.app/api/submit-quote/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
